@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Marwan pablo radio">
+    <link rel="shortcut icon" href="imgs/music-note.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Pablo Radio</title>
+</head>
+<body>
+
+    <div class="alert alert-done">
+       بابلو ع الـ Repeat <i class="fas fa-check-circle"></i>
+    </div>
+    <div class="search-pop">
+        <div class="search-container">
+            <div class="search-bar">
+                <input type="search" name="" id="searchInput">
+                <span class="search-button">
+                    <i class="fal fa-search" id="search"></i>
+                </span>
+            </div>
+            <div class="search-results">
+            </div>
+            <div class="search-res2">
+                <div class="search-loader">
+                    <div class="loadingio-spinner-eclipse-z06v9tv3lw9"><div class="ldio-vrx7yfladyb">
+                        <div></div>
+                        </div></div>              
+                </div>
+                <div class="results"></div>
+            </div>
+        </div>
+       
+    </div>
+    <div class="player-container" data-aos="flip-left" data-aos-duration="1500">
+        <audio id="audio" src="" controls hidden></audio>
+        <div class="img-toop">
+            <img src="" alt="" srcset="">
+        </div>
+        <div id="searchbb" class="search-box">
+            <i class="fal fa-search" id="search"></i>
+        </div>
+        <div class="music-data">
+            <h2 id="title"></h2>
+            <span class="artist"></span>
+            <div class="current-total">
+                <span class="running">00:00</span>
+                <span class="total">00:00</span>
+                <div class="clear-fix"></div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress" id="progress">
+                    <div></div>
+                </div>
+            </div>
+            <div class="controls">
+                <i class="far fa-backward" id="back"></i>
+                <i class="far fa-play pplay" id="play"></i>
+                <i class="far fa-forward" id="next"></i>
+            </div>
+        </div>
+        <div class="tools">
+            <!-- Love Button -->
+            <div class="love-div tool">
+                <input type="checkbox" id="love" class="visually-hidden toggle">
+                <label class="love" for="love">
+                    <i class="fas fa-heart love-sympol"></i>
+                </label>
+            </div>
+            <!-- Love Button -->
+            <div class="random-div tool">
+                <input type="checkbox"  id="random" class="visually-hidden toggle">
+                <label for="random" class="random">
+                    <i class="fas fa-random"></i>
+                    
+                </label>
+            </div>
+            <div class="repeat-div tool">
+                <input type="checkbox"  id="repeat" class="visually-hidden toggle">
+                <label for="repeat" class="repeat">
+                    <i class="fas fa-redo-alt"></i>
+                </label>
+            </div>
+            <div class="other-div tool">
+                <input type="checkbox" class="visually-hidden toggle" id="other">
+                <label for="other" class="other">
+                    <i class="fas fa-ellipsis-h"></i>
+                </label>
+                <div class="menu">
+                    <span>تواصل معايا</span>
+                    <div class="links">
+                        <a href="http://github.com/xRitz0x" target="_blank" rel="noopener noreferrer" class="github"><i class="fab fa-github"></i></i></a>
+                        <a href="http://fb.com/xRitz0x" target="_blank" rel="noopener noreferrer" class="facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="http://twitter.com/xRitz0x" target="_blank" rel="noopener noreferrer" class="twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script type="text/javascript" src="js/script.js" async></script>
+</body>
+</html>

@@ -1,0 +1,421 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@200;300;400;500;600;700;800&family=Tajawal:wght@200;300;400;500;700;800;900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+html{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    background-color: #ff574f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 100vh;
+}
+.f-20 {
+    font-size: 18px !important;
+}
+.f-25{
+    font-size: 25px !important;
+}
+.tc {
+    text-align: center;
+}
+.player-container{
+    border-radius: 13px;
+    height: auto;
+    background-color: #121212;
+    color: whitesmoke;
+    font-family: 'Titillium Web', sans-serif;
+    width: 20vw;
+    padding: 5px;
+    -moz-box-shadow: 0px 4px 14px 1px rgba(0,0,0,0.5);
+    -o-box-shadow: 0px 4px 14px 1px rgba(0,0,0,0.5);
+    box-shadow: 0px 4px 14px 1px rgba(0,0,0,0.5);
+}
+/*
+    * Loader
+*/
+.search-loader{
+    width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    min-height: 150px;
+}
+.search-loader.hidden{
+    display: flex;
+}
+@keyframes ldio-vrx7yfladyb {
+    0% { transform: rotate(0deg) }
+    50% { transform: rotate(180deg) }
+    100% { transform: rotate(360deg) }
+  }
+  .ldio-vrx7yfladyb div {
+    position: absolute;
+    animation: ldio-vrx7yfladyb 1.04s linear infinite;
+    width: 80px;
+    height: 80px;
+    top: 10px;
+    left: 10px;
+    border-radius: 50%;
+    box-shadow: 0 2px 0 0 #ff574f;
+    transform-origin: 40px 41px;
+  }
+  .loadingio-spinner-eclipse-z06v9tv3lw9 {
+    width: 61px;
+    height: 61px;
+    display: inline-block;
+    overflow: hidden;
+    background: none;
+  }
+  .ldio-vrx7yfladyb {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform: translateZ(0) scale(0.61);
+    backface-visibility: hidden;
+    transform-origin: 0 0; /* see note above */
+  }
+  .ldio-vrx7yfladyb div { box-sizing: content-box; }
+/*
+  End
+*/  
+
+.search-pop{
+    transition: opacity 0.5s ease-out;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    /*              */
+    display: block;
+    width: 100vw;
+    background-color: rgb(54 37 37 / 65%);
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 0;
+}
+
+.search-container {
+    width: 22vw;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -25%);
+}
+div.search-pop.shown {
+    opacity: 1;
+    height: 100vh;
+    z-index: 10;
+}
+.search-results , .search-res2{
+    background-color: #111;
+    padding: 5px 6px;
+    transition: opacity 0.3s ease-in;
+}
+.search-res2{
+    opacity: 0;
+    height: 0;
+    display: none;
+    margin-top: -10px
+}
+.search-res2.shown .results{
+    margin-top: 10px;
+}
+.results.no-result {
+    text-align: center;
+    font-family: 'Changa', sans-serif;
+    color: rgb(185, 176, 176);
+    padding: 5px;
+}
+.search-res2.shown {
+    opacity: 1;
+    height: auto;
+    display: block;
+}
+.search-results.hidden {
+    opacity: 0;
+    height: 0;
+    display: none;
+
+}
+.song-searched {
+    background-color: #1d1d1d;
+    padding: 10px 5px;
+    margin-bottom: 2px;
+
+}
+.search-results .song-searched div , .search-res2 .song-searched div  {
+    display: inline-block;
+}
+.song-searched .title {
+    color: #f0f0f0;
+    width: 60%;
+    cursor: pointer;
+    transition: all 0.11s ease-in;
+    font-weight: 400;
+    letter-spacing: 0.25px;
+    font-family: 'Changa', sans-serif;
+}
+.song-searched .title:hover {
+    padding-left: 12px;
+    width: 55%;
+}
+.song-searched .time {
+    color :#6d6d6d;
+    width: 25%;
+    text-align: right;
+    cursor: default;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 700;
+}
+.song-searched .love {
+    color :#6d6d6d;
+    width: 11%;
+    text-align: right;
+    cursor: default;
+}
+.search-pop .search-bar span {
+    background-color: red;
+    position: absolute;
+    right: 0;
+    height: 45px;
+    align-items: center;
+    align-self: center;
+    display: inline-flex;
+    padding: 0 12px;
+    border-top-right-radius: 16px;
+    outline: 0;
+}
+.search-bar input {
+    width: 100%;
+    height: 45px;
+    padding: 0px 5px;
+    outline: 0;
+    border: 0;
+    border-top-right-radius: 16px;
+    font-size: 18px;
+    border-top-left-radius: 16px;
+    font-weight: 500;
+    font-family: 'Changa',sans-serif;
+    padding-right: 45px;
+}
+.search-box{
+    float: right;
+    padding: 6px 13px;
+    font-size: 18px;
+}
+.alert {
+    position: fixed;
+    top: -10%;
+    background-color: rgb(18, 18, 18);
+    color: white;
+    padding: 13px;
+    border-radius: 10px;
+    max-width: 350px;
+    direction: rtl;
+    overflow: hidden;
+    font-family: 'Tajawal', sans-serif;
+    transition: top 0.3s linear;
+    -webkit-transition: top 0.3s linear;
+}
+.alert i {
+    color: #ff574f;
+}
+.img-toop {
+    width: 130px;
+    height: 100px;
+    position: absolute;
+    top: -50px;
+    right: 50%;
+    transform: translate(50%, 0);
+    box-shadow: -1px 4px 11px 0px rgba(0,0,0,0.6);
+    padding: 5px;
+    border-radius: 69px;
+}
+.img-toop img{
+    height: 100%;
+    width: 100%;
+    border-radius: 69px;
+}
+i{
+    cursor: pointer;
+}
+.music-data {
+    text-align: center;
+    margin: 22px 0;
+    padding: 5px;
+}
+.current-total {
+    max-width: 320px;
+    margin: 0 auto;
+}
+.current-total span{
+    font-size: 14px;
+}
+.current-total .running {
+    float: left;
+}
+.current-total .total {
+    float: right;
+}
+.clear-fix {
+    clear: both;
+}
+.progress-bar{
+    max-width: 320px;
+    height: 4px;
+    background-color: black;
+    margin: 1px auto 0 auto;
+    cursor: pointer;
+    border-radius: 20px;
+}
+.progress {
+    border-radius: 20px;
+    width: 0%;
+    height: 3px;
+    background-color: #ff574f;
+}
+.music-data h2 {
+    margin-bottom: -4px;
+    color: #fafafa;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: 38px;
+}
+.music-data span{
+    color:#434343;
+    font-weight: bold;
+}
+.controls{
+    margin: 20px 0 0 0;
+    display: flex;
+    justify-content: center;
+}
+.controls i {
+    font-size: 20px;
+    margin-left: 30px;
+}
+.controls i:first-child {
+    margin: 0;
+}
+.tools{
+    display: flex;
+    justify-content: center;
+    margin: -5px 0 20px 0;
+    padding: 0 10px;
+}
+.tools .tool {
+    margin-left: 22%;
+    font-size: 15px;
+}
+.tools .tool:first-child {
+    margin-left: 3%;
+}
+/* Love Button */
+.visually-hidden {
+display: none;
+}
+input.love-searched:checked ~ label i{
+    color: #ff564c !important;
+}
+.toggle:checked ~ label i {
+    color: #ff564c;
+}
+.other:hover {
+    color: #ff564c;
+}
+
+label i{
+    cursor: pointer;
+    transition: all 0.15s linear;
+}
+.menu {
+    display: none;
+    position: absolute;
+    min-width: 100px;
+    background-color: #2a232c;
+    padding: 5px 5px;
+    bottom: -41px;
+    border-radius: 5px;
+}
+.menu.shown {
+    display: block;
+}
+.menu span{
+    display: block;
+    text-align: center;
+    font-family: 'Changa';
+    font-weight: 500;
+}
+.menu::before{
+    content: '';
+    width: 0;
+    height: 0px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid black;
+    position: absolute;
+    top: -5px;
+    left: 4px;
+}
+.links{
+    text-align: center;
+}
+.links a {
+    padding: 5px;
+    color: white;
+    font-size: 16px;
+    transition: all 0.2s ease-in-out;
+}
+.links a.github:hover{
+color: #6e5494;
+}
+.links a.facebook:hover{
+    color: #3b5998;
+}
+.links a.twitter:hover{
+    color: #1da1f2;
+}
+        
+/* ENd love Button*/
+/* Fav Section */
+
+@media screen and (max-width:980px){
+    .player-container {
+        width: 28vw;
+    } 
+    .search-container {
+        width: 33vw !important;
+    }
+    body{
+        flex-direction: column;
+    }
+}
+@media screen and (max-width:680px){
+    .player-container {
+        width: 45vw;
+    }
+    .search-container {
+        width: 50vw !important;
+    }
+    body{
+        flex-direction: column;
+    }
+}
+@media screen and (max-width:480px){
+    .music-data h2{
+        font-size: 16px !important;
+    }
+    .player-container {
+        width: 85vw;
+    }
+    .search-container {
+        width: 90vw !important;
+    }
+}
