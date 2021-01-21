@@ -89,7 +89,7 @@ body{
     overflow: hidden;
     /*              */
     display: block;
-    width: 100vw;
+    width: 100%;
     background-color: rgb(54 37 37 / 65%);
     position: fixed;
     top: 0;
@@ -106,7 +106,7 @@ body{
 }
 div.search-pop.shown {
     opacity: 1;
-    height: 100vh;
+    height: 100%;
     z-index: 10;
 }
 .search-results , .search-res2{
